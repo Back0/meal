@@ -16,62 +16,64 @@ html {
   clear: both;
 }
 .header {
-  @headerHeight: 43px;
+  @headerHeight: 86px;
+  @padding: 30px;
   height: @headerHeight;
-  padding: 0 15px;
+  padding: 0 @padding;
   border-bottom: 1px solid #ffd705;
   background-color: #ffd705;
   .logo {
     float: left;
-    margin-top: 4px;
+    margin-top: 0.10667rem;
     img {
-      width: 34px;
-      height: 34px;
+      width: 0.90667rem;
+      height: 0.90667rem;
     }
   }
   .title {
     line-height: @headerHeight;
-    font-size: 19px;
+    font-size: 38px;
     font-weight: bold;
     color: #6b450a;
     text-align: center;
-    margin: 0 32px;
+    margin: 0 0.85333rem;
   }
 }
 .container {
+  @smallFont: 28px;
+  @baseFont: 32px;
+  @font: 38px;
   background-color: #efefef;
   overflow: hidden;
   position: relative;
   .tip {
-    height: 37px;
-    line-height: 37px;
-    padding: 0 15px;
+    height: 0.98667rem;
+    line-height: 0.98667rem;
+    padding: 0 0.4rem;
     background-color: #fff3cf;
-    .words {
-      font-size: 14px;
-    }
+    font-size: @smallFont;
     .ops {
       float: right;
       color: #bfbfbf;
-      font-size: 17px;
     }
   }
 
   .area {
-    margin-bottom: 100px;
+    margin-bottom: 2.66667rem;
     .citys {
       .letter {
-        height: 35px;
-        line-height: 35px;
-        padding: 0 15px;
-        font-size: 14px;
+        height: 0.93333rem;
+        line-height: 0.93333rem;
+        padding: 0 0.4rem;
+        font-size: @smallFont;
         color: #666666;
       }
       .city {
         float: left;
         width: 25%;
-        height: 45px;
-        line-height: 45px;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        font-size: @baseFont;
         text-align: center;
         overflow: hidden;
         text-overflow:ellipsis;
@@ -79,7 +81,7 @@ html {
         border-bottom: 1px solid #efefef;
         background-color: #fff;
         &:not(:last-child) {
-          border-right: 1px solid #efefef;
+          border-right: 2px solid #efefef;
         }
         &.hot {
           color: #fa9700;
@@ -90,9 +92,9 @@ html {
   }
   .service {
     width: 100%;
-    height: 19px;
+    height: 0.50667rem;
     text-align: center;
-    font-size: 14px;
+    font-size: @smallFont;
     color: #999;
     position: absolute;
     bottom: 0;
