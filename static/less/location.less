@@ -46,6 +46,7 @@ html {
   @smallFont: 28px;
   @baseFont: 32px;
   @font: 38px;
+  @borderWidth: 0.02667rem;
   width: 100%;
   background-color: #efefef;
   overflow: hidden;
@@ -82,10 +83,10 @@ html {
         overflow: hidden;
         text-overflow:ellipsis;
         white-space: nowrap;
-        border-bottom: 1px solid #efefef;
+        border-bottom: @borderWidth solid #efefef;
         background-color: #fff;
-        &:not(:last-child) {
-          border-right: 2px solid #efefef;
+        &:not(:nth-of-type(4n)) {
+          border-right: @borderWidth solid #efefef;
         }
         &.hot {
           color: #fa9700;
