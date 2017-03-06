@@ -7,8 +7,8 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html {
-  position: relative;
+html, body {
+  height: 100%;
 }
 .clearfix {
   &:after {
@@ -16,6 +16,11 @@ html {
     display: block;
     clear: both;
   }
+}
+.page {
+  min-height: 100%;
+  position: relative;
+  background-color: #efefef;
 }
 .header {
   @headerHeight: 1.12rem;
@@ -45,12 +50,9 @@ html {
 .container {
   @smallFont: 28px;
   @baseFont: 32px;
-  @font: 38px;
   @borderWidth: 0.02667rem;
   width: 100%;
-  background-color: #efefef;
   overflow: hidden;
-  position: relative;
   .tip {
     height: 0.98667rem;
     line-height: 0.98667rem;
