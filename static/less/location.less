@@ -10,24 +10,27 @@
 html {
   position: relative;
 }
-.clearfix:after {
-  content: '';
-  display: block;
-  clear: both;
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
 .header {
-  @headerHeight: 86px;
-  @padding: 30px;
+  @headerHeight: 1.12rem;
+  @padding: 0.4rem;
   height: @headerHeight;
   padding: 0 @padding;
   border-bottom: 1px solid #ffd705;
   background-color: #ffd705;
   .logo {
+    @logoSize: 0.90667rem;
     float: left;
-    margin-top: 0.10667rem;
+    margin-top: (@headerHeight - @logoSize)/2;
     img {
-      width: 0.90667rem;
-      height: 0.90667rem;
+      width: @logoSize;
+      height: @logoSize;
     }
   }
   .title {
@@ -43,6 +46,7 @@ html {
   @smallFont: 28px;
   @baseFont: 32px;
   @font: 38px;
+  width: 100%;
   background-color: #efefef;
   overflow: hidden;
   position: relative;
@@ -97,7 +101,7 @@ html {
     font-size: @smallFont;
     color: #999;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     .tel {
       color: #fa9700;
     }
