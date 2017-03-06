@@ -1,27 +1,6 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html, body {
-  height: 100%;
-}
-.clearfix {
-  &:after {
-    content: '';
-    display: block;
-    clear: both;
-  }
-}
-.page {
-  min-height: 100%;
-  position: relative;
-  background-color: #efefef;
-}
+@import "./common.less";
+
 .header {
   @headerHeight: 1.12rem;
   @padding: 0.4rem;
@@ -53,7 +32,7 @@ html, body {
   @borderWidth: 0.02667rem;
   width: 100%;
   overflow: hidden;
-  .clearfix();
+  .clearfix;
   .tip {
     height: 0.98667rem;
     line-height: 0.98667rem;
