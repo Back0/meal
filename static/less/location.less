@@ -26,41 +26,39 @@
   }
 }
 .search {
-  @searchHeight: 68px;
-  padding: 14px 10px;
-  padding-left: 18px;
-  margin-bottom: 20px;
+  padding: 0.18667rem 0.13333rem;
+  padding-left: 0.24rem;
+  margin-bottom: 0.26667rem;
   background-color: @baseYellow;
   .search_box {
-    margin-right: 120px;
+    margin-right: 1.6rem;
     .search_input {
       width: 100%;
-      height: 60px;
-      padding-left: 60px;
+      height: 0.8rem;
+      padding-left: 0.8rem;
+      padding-right: 0.15rem;
       background-image: url('../imgs/search.png');
-      background-size: 28px 28px;
+      background-size: 0.37333rem 0.37333rem;
       background-repeat: no-repeat;
-      background-position: 15px;
-      font-size: 30px;
+      background-position: 0.2rem;
+      font-size: @smallFont;
       outline: none;
       border: none;
-      border-radius: 6px;
+      border-radius: 0.08rem;
     }
   }
   .search_btn {
     float: right;
-    width: 100px;
-    height: 60px;
+    width: 1.33333rem;
+    height: 0.8rem;
     font-size: @baseFont;
     color: @fontYellow;
     background-color: #fff;
     text-align: center;
     outline: none;
     border: none;
-    border-radius: 3px;
+    border-radius: 0.04rem;
   }
-
-
 }
 .container {
   width: 100%;
@@ -77,7 +75,28 @@
       color: #bfbfbf;
     }
   }
-
+  .positioning {
+    @positionHeight: 1.2rem;
+    height: @positionHeight;
+    line-height: @positionHeight;
+    background-color: #fff;
+    text-align: center;
+    .position {
+      display: inline;
+      width: 100%;
+      height: @positionHeight;
+      color: #333;
+      text-align: center;
+      .posi_words {
+        display: inline-block;
+        font-size: 30px;
+        background: url('../imgs/address_search.png') no-repeat;
+        background-size: 0.4rem;
+        background-position-y: center;
+        padding-left: 0.4667rem;
+      }
+    }
+  }
   .area {
     margin-bottom: 2.66667rem;
     .citys {
