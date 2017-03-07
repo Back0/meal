@@ -5,6 +5,7 @@
   @headerHeight: 1.12rem;
   height: @headerHeight;
   padding: 0 @paddingSide;
+  color: #6b450a;
   border-bottom: 1px solid @baseYellow;
   background-color: @baseYellow;
   .logo {
@@ -16,13 +17,41 @@
       height: @logoSize;
     }
   }
+
   .title {
     line-height: @headerHeight;
+    margin: 0 0.85333rem;
     font-size: 38px;
     font-weight: bold;
-    color: #6b450a;
     text-align: center;
-    margin: 0 0.85333rem;
+  }
+  .msg {
+    .clearfix;
+    margin-left: 0.85333rem;
+    line-height: @headerHeight;
+    .city {
+      font-size: @baseFont;
+      margin-left: 20px;
+      float: left;
+      .city_icon {
+        width: 0.26667rem;
+        height: 16px;
+        margin-left: 5px;
+        .sprite;
+        background-position: 0 0;
+      }
+    }
+    .mine {
+      font-size: @baseFont;
+      float: right;
+      .mine_icon {
+        width: 0.26667rem;
+        height: 32px;
+        margin-right: 10px;
+        .sprite;
+        background-position: -30px -385px;
+      }
+    }
   }
 }
 .search {
@@ -111,10 +140,9 @@
         float: right;
         width: 0.26667rem;
         height: 0.42667rem;
+        .sprite;
         margin-top: (@addressHeight - 0.42667rem)/2;
-        background-image: url('../imgs/sprite.png');
         background-position: 0 -0.61333rem;
-        background-size: 4rem 10rem;
       }
       .address_msg {
         margin-right: 0.8rem;
