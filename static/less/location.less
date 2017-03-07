@@ -5,8 +5,8 @@
   @headerHeight: 1.12rem;
   height: @headerHeight;
   padding: 0 @paddingSide;
-  border-bottom: 1px solid #ffd705;
-  background-color: #ffd705;
+  border-bottom: 1px solid @baseYellow;
+  background-color: @baseYellow;
   .logo {
     @logoSize: 0.90667rem;
     float: left;
@@ -24,6 +24,43 @@
     text-align: center;
     margin: 0 0.85333rem;
   }
+}
+.search {
+  @searchHeight: 68px;
+  padding: 14px 10px;
+  padding-left: 18px;
+  margin-bottom: 20px;
+  background-color: @baseYellow;
+  .search_box {
+    margin-right: 120px;
+    .search_input {
+      width: 100%;
+      height: 60px;
+      padding-left: 60px;
+      background-image: url('../imgs/search.png');
+      background-size: 28px 28px;
+      background-repeat: no-repeat;
+      background-position: 15px;
+      font-size: 30px;
+      outline: none;
+      border: none;
+      border-radius: 6px;
+    }
+  }
+  .search_btn {
+    float: right;
+    width: 100px;
+    height: 60px;
+    font-size: @baseFont;
+    color: @fontYellow;
+    background-color: #fff;
+    text-align: center;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+  }
+
+
 }
 .container {
   width: 100%;
@@ -67,7 +104,7 @@
           border-right: @borderWidth solid #efefef;
         }
         &.hot {
-          color: #fa9700;
+          color: @fontYellow;
         }
       }
     }
@@ -82,7 +119,7 @@
     position: absolute;
     bottom: 5px;
     .tel {
-      color: #fa9700;
+      color: @fontYellow;
     }
   }
 }
@@ -126,7 +163,7 @@
     height: @btnHeight;
     line-height: @btnHeight;
     font-size: @smallFont;
-    background-color: #ffd300;
+    background-color: @baseYellow;
     color: #6b450a;
     border: none;
     outline: none;
