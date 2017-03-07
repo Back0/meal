@@ -97,6 +97,42 @@
       }
     }
   }
+  .addresses {
+    margin-bottom: 1.6rem;
+    .address_item {
+      @addressHeight: 1.6rem;
+      height: @addressHeight;
+      padding-left: @paddingSide;
+      padding-right: 0.26667rem;
+      background-color: #fff;
+      border-bottom: 0.02667rem solid #ddd;
+      overflow: hidden;
+      .more {
+        float: right;
+        width: 0.26667rem;
+        height: 0.42667rem;
+        margin-top: (@addressHeight - 0.42667rem)/2;
+        background-image: url('../imgs/sprite.png');
+        background-position: 0 -0.61333rem;
+        background-size: 4rem 10rem;
+      }
+      .address_msg {
+        margin-right: 0.8rem;
+        .address_name {
+          font-size: @bigFont;
+          line-height: 0.66667rem;
+          color: #000;
+          margin-top: 0.26667rem;
+        }
+        .address_detail {
+          font-size: @smallFont;
+          color: #CACAD0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
   .area {
     margin-bottom: 2.66667rem;
     .citys {
