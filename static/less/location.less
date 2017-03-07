@@ -3,9 +3,8 @@
 
 .header {
   @headerHeight: 1.12rem;
-  @padding: 0.4rem;
   height: @headerHeight;
-  padding: 0 @padding;
+  padding: 0 @paddingSide;
   border-bottom: 1px solid #ffd705;
   background-color: #ffd705;
   .logo {
@@ -33,7 +32,7 @@
   .tip {
     height: 0.98667rem;
     line-height: 0.98667rem;
-    padding: 0 0.4rem;
+    padding: 0 @paddingSide;
     background-color: #fff3cf;
     font-size: @smallFont;
     .ops {
@@ -48,7 +47,7 @@
       .letter {
         height: 0.93333rem;
         line-height: 0.93333rem;
-        padding: 0 0.4rem;
+        padding: 0 @paddingSide;
         font-size: @smallFont;
         color: #666666;
       }
@@ -85,5 +84,54 @@
     .tel {
       color: #fa9700;
     }
+  }
+}
+.footer {
+  @footerHeight: 120px;
+  width: 100%;
+  height: @footerHeight;
+  line-height: @footerHeight;
+  padding: 0 @paddingSide 0 40px;
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  bottom: 0;
+  * {
+    vertical-align: middle;
+  }
+  .close {
+    color: #fa9700;
+    font-size: @smallFont;
+    line-height: @smallFont;
+    position: absolute;
+    left: @marginSmall;
+    top: @marginSmall;
+  }
+  .logo {
+    @logoSize: 0.90667rem;
+    margin-right: 10px;
+    img {
+      width: @logoSize;
+      height: @logoSize;
+    }
+  }
+  .desc {
+    font-size: 26px;
+    color: #fff;
+  }
+  .down_btn {
+    @btnHeight: 58px;
+    float: right;
+    margin-top: (@footerHeight - @btnHeight)/2;
+    width: 150px;
+    height: @btnHeight;
+    line-height: @btnHeight;
+    font-size: @smallFont;
+    background-color: #ffd300;
+    color: #6b450a;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
   }
 }
