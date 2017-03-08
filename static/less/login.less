@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import "./common.less";
+
+.header {
+  @headerHeight: 100px;
+  @btnWidth: 155px;
+  .clearfix;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+  .back_btn {
+    float: left;
+    width: 100px;
+    height: @headerHeight;
+    line-height: @headerHeight;
+    text-align: center;
+    font-size: 36px;
+  }
+  .register_btn {
+    float: right;
+    width: @btnWidth;
+    height: @headerHeight;
+    line-height: @headerHeight;
+    color: #656565;
+    font-size: @smallFont;
+  }
+  .title {
+    height: @headerHeight;
+    line-height: @headerHeight;
+    margin: 0 @btnWidth;
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+  }
+}
+.container {
+  font-size: 28px;
+  .login_tab {
+    @tabHeight: 80px;
+    .tab_item {
+      float: left;
+      width: 50%;
+      height: @tabHeight;
+      line-height: @tabHeight;
+      font-size: inherit;
+      color: #656565;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-bottom: 2px solid #DDD8CE;
+      &:first-child {
+        border-right: 2px solid #DDD8CE;
+      }
+      &.active {
+        color: #000;
+        background-color: #fff;
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+  .tab_content {
+
+  }
+}
