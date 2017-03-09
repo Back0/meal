@@ -104,10 +104,27 @@
         position: absolute;
         width: 2.466667rem;
         height: 1.8rem;
+        overflow: hidden;
         border-bottom: 0.026667rem solid #ebebeb;
         border-right: 0.026667rem solid #ebebeb;
         .ava {
-          position: absolute;
+              width: 1.6rem;
+              height: 0.666667rem;
+              line-height: 0.8rem;
+              font-size: 25px;
+              text-align: center;
+              position: absolute;
+              left: -0.533333rem;
+              top: -0.08rem;
+              transform: rotate(-45deg);
+          &.brand {
+            color: #6b450a;
+            background-color: #fdd943;
+          }
+          &.new {
+            color: #fff;
+            background-color: #0bb46a;
+          }
         }
         .merchant_logo {
           width: 100%;
