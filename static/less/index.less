@@ -140,7 +140,7 @@
           .name {
             float: left;
             max-width: 5.06rem;
-            font-size: @baseFont;
+            font-size: 30px;
             color: #2f2f2f;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -155,7 +155,7 @@
         }
         .mid {
           .clearfix;
-          margin-top: 0.133333rem;
+          margin-top: 0;
           .stars {
             .clearfix;
             float: left;
@@ -181,7 +181,10 @@
                   background-position: 0 -1.066667rem;
                 }
               }
-            }            
+            } 
+            .sales {
+              font-size: 24px;
+            }           
           }
           .time {
             float: right;
@@ -205,6 +208,24 @@
             padding: 0.026667rem 0.213333rem;
             font-weight: 500;
           }
+        }        
+      }
+      .cards {
+        margin-left: 2.666667rem;
+        padding: 0.2133333rem 0.4rem 0.2133333rem 0;
+        border-top: 0.026667rem solid #f0f0f0;
+        .card_img {
+          width: 0.373333rem;
+          height: 0.373333rem;
+          float: left;
+          margin-top: 0.066667rem;
+          margin-right: 0.133333rem;
+        }
+        .card_desc {
+          font-size: 24px;
+          color: #898989;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
@@ -217,6 +238,7 @@
   bottom: 0;
   width: 100%;
   border-top: 0.026667rem solid #b6b6b6;
+  background-color: rgba(246,246,246,0.95);
   .menus {
     .clearfix;
     .menu {
