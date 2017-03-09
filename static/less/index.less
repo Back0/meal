@@ -1,2 +1,71 @@
 @charset "UTF-8";
 @import "./common.less";
+
+.header {
+  @background: rgba(0,0,0,0.3);
+  height: 4.533333rem;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 11;
+    left: 0;
+    bottom: -0.266667rem;
+    width: 100%;
+    height: 0.533333rem;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .banner {
+    width: 100%;
+    height: 100%;
+  }
+  .headerbar {
+    @barHeight: 0.693333rem;
+    .clearfix;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 20px;
+    font-size: @bigFont;
+    color: #fff;
+    .title {
+      height: @barHeight;
+      line-height: @barHeight;
+      text-align: center;
+      margin: 0 100px;
+      .wrap {
+        display: inline-block;
+        height: @barHeight;
+        line-height: @barHeight;
+        background-color: @background;
+        border-radius: 0.346667rem;
+        padding: 0 0.1rem;
+        * {
+          vertical-align: middle;
+        }
+        .icon-loc-hollow {
+          margin-right: -0.133333rem;
+        }
+        .icon-arrow-right-thin {
+          margin-left: -0.133333rem;
+        }
+
+      }
+      
+    }
+    .search {
+      float: right;
+      text-align: center;
+      height: 0.693333rem;
+      line-height: 0.693333rem;
+      width: 0.693333rem;
+      margin-right: 0.266667rem;
+      border-radius: 0.346667rem;
+      background-color: @background;
+    }
+    
+  }
+}
