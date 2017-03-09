@@ -69,3 +69,65 @@
     
   }
 }
+.menus_bar {
+  @menuHeight: 1.333333rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 0.026667rem solid #b6b6b6;
+  .menus {
+    .clearfix;
+    .menu {
+      float: left;
+      width: 33.333%;
+      height: @menuHeight;
+      .menu_link {
+        display: inline-block;
+        width: 100%;
+        height: @menuHeight;
+        text-align: center;
+        font-size: 22px;
+        color: #9e9e9e;
+        i {
+          display: block;
+          width: 0.586667rem;
+          height: 0.586667rem;
+          margin: 0.186667rem auto 0;
+          background: url('../imgs/tab-icons.png') no-repeat;
+          background-size: 0.586667rem auto;
+          &.ico-bowl-fill {
+            background-position: 0 0;
+          }
+          &.ico-paper {
+            background-position: 0 -1.173333rem;
+          }
+          &.ico-user {
+            background-position: 0 -2.346667rem;
+          }
+        }
+        .menu_text {
+          display: block;
+          margin-top: 0.08rem;
+        }
+      }
+      &.active {        
+        .menu_text {
+          color: #784203;
+        }
+        i {
+          &.ico-bowl-fill {
+            background-position: 0 -0.586667rem;
+          }
+          &.ico-paper {
+            background-position: 0 -1.76rem;
+          }
+          &.ico-user {
+            background-position: 0 -2.933333rem;
+          }
+        }
+        
+      }
+    }
+  }
+}
