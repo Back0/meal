@@ -130,9 +130,54 @@
           } 
           .distance {
             float: right;
+            text-align: right;
             color: #656565;
             font-size: 24px;
             margin-top: 0.133333rem;
+          }
+        }
+        .mid {
+          .clearfix;
+          margin-top: 0.133333rem;
+          .stars {
+            .clearfix;
+            float: left;
+            .star {
+              .clearfix;
+              display: inline-block;
+              width: 2.026667rem;
+              height: 0.32rem;
+              i {
+                float: left;
+                width: 0.453333rem;
+                height: 0.453333rem;
+                margin-right: -0.053333rem;
+                background: url('../imgs/homestars.png') no-repeat;
+                background-size: cover;
+                background-position: 0;
+                &.score {
+                  margin-top: 0.026667rem;
+                  background-position: 0 -0.053333rem;
+                }
+                &.score_half {
+                  margin-top: 0.026667rem;
+                  background-position: 0 -1.066667rem;
+                }
+              }
+            }            
+          }
+          .time {
+            float: right;
+            text-align: right;
+            color: #656565;
+          }
+        }
+        .price {
+          color: #656565;
+          font-size: 24px;
+          margin-top: 0.106667rem;
+          .line {
+            margin: 0 0.066667rem;
           }
         }
       }
