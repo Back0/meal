@@ -15,9 +15,12 @@
   }
 }
 .container {
+  margin-bottom: 1.333333rem;
   .orders_list {
     .order {
       background-color: #fff;
+      border-bottom: 0.026667rem solid #ddd;
+      margin-bottom: 0.4rem;
       .order_title {
         @titleHeight: 1.173333rem;
         .clearfix;
@@ -58,7 +61,9 @@
         }
       }
       .order_detail {
-        padding: 0.266667rem 0.533333rem 0.133333rem 0.4rem;
+        position: relative;
+        padding: 0.266667rem 0.8rem 0.266667rem 0.4rem;
+        .clearfix;
         .avator {
           float: left;
           width: 1.92rem;
@@ -66,6 +71,56 @@
         }
         .food_detail {
           margin-left: 2.186667rem;
+          .price {
+            font-size: @smallFont;
+            color: #fe4d3d;
+          }
+          .time {
+            font-size: 24px;
+            color: #666;
+            margin-top: 0.106667rem;
+          }
+          .delivery {
+            font-size: 24px;
+            color: #666;
+            margin-top: 0.106667rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+        .field-arrow {
+          color: #bfbfbf;
+          font-size: 28px;
+          position: absolute;
+          top: 0.8rem;
+          right: 0.333333rem;
+        }
+      }
+      .evaluation {
+        @evaHeight: 1.226667rem;
+        height: @evaHeight;
+        line-height: @evaHeight;
+        vertical-align: middle;
+        text-align: right;
+        padding: 0 @paddingSide;
+        border-top: 0.026667rem solid #f0f0f0;
+        .btn {
+          height: 0.8rem;
+          width: 1.866667rem;
+          font-size: 26px;
+          text-align: center;
+          margin-left: 0.133333rem;
+          border-radius: 0.133333rem;
+          &.another {
+            background: #fff;
+            border: 0.026667rem solid #aaa;
+            color: #656565;
+          }
+          &.eva {
+            background: #ffd300;
+            color: #6b450a;
+          }
         }
       }
     }
