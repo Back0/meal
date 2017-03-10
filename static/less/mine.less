@@ -14,3 +14,50 @@
     font-weight: bold;
   }
 }
+.container {
+  background-color: #fff;
+  .user {
+    font-size: @baseFont;
+    color: #333;
+    .user_name {
+      overflow: hidden;
+      .name {
+        height: 1.066667rem;
+        line-height: 1.066667rem;
+        padding: 0 0.4rem;
+        margin-left: 0.066667rem;
+        margin-top: 0.266667rem;
+        border-bottom: 0.026667rem solid #ddd;
+      }      
+    }
+    .user_msg {
+      padding: 0 0.4rem;
+      .user_item {
+        height: 1.2rem;
+        line-height: 1.2rem;
+        border-bottom: 0.026667rem solid #ddd;
+        .residual-icon {
+          float: left;
+          width: 0.533333rem;
+          height: 0.533333rem;
+          margin-top: 0.333333rem;
+          margin-left: 0.066667rem;
+          margin-right: 0.133333rem;
+          background: url('../imgs/user-icon.png') no-repeat;
+          background-size: 5.52rem 0.48rem;
+          &.address-icon {
+            background-position: -4.053333rem 0;
+          }
+        }
+        .icon-arrow-right-thin {
+            height: 1.066667rem;
+            line-height: 1.173333rem;
+            width: 0.16rem;
+            float: right;
+            color: #aaa;
+            font-size: 38px;
+          }
+      }
+    }
+  }
+}
