@@ -16,9 +16,11 @@
 }
 .container {
   background-color: #fff;
+  overflow: hidden;
   .user {
     font-size: @baseFont;
     color: #333;
+    border-bottom: 0.026667rem solid #ddd;
     .user_name {
       overflow: hidden;
       .name {
@@ -36,6 +38,9 @@
         height: 1.2rem;
         line-height: 1.2rem;
         border-bottom: 0.026667rem solid #ddd;
+        &:last-child {
+          border-bottom: 0;
+        }
         .residual-icon {
           float: left;
           width: 0.533333rem;
@@ -48,8 +53,22 @@
           &.address-icon {
             background-position: -4.053333rem 0;
           }
-        }
-        
+          &.ticket-icon {
+            background-position: -0.32rem 0;
+          }
+          &.opinion-icon {
+            background-position: -0.96rem 0;
+          }
+          &.help-icon {
+            background-position: -1.573333rem 0;
+          }
+        } 
+        &.phone {
+          background: url('../imgs/user-phone.png') no-repeat;
+          background-size: 0.426667rem 0.48rem;
+          padding-left: 0.853333rem;
+          background-position: 0.24rem;
+        }     
       }
     }
     .icon-arrow-right-thin {
@@ -61,5 +80,18 @@
       font-size: 38px;
       margin-right: 20px;
     }
+  }
+  .logout {
+    display: block;
+    font-size: 0.373333rem;
+    background-color: #fff;
+    width: 93%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    color: #fa9700;
+    border: 0.026667rem solid #fa9700;
+    border-radius: 6px;
+    margin: 0.613333rem auto;
   }
 }
