@@ -32,12 +32,28 @@
           line-height: @titleHeight;
         }
         .name {
+          display: inline-block;
+          height: @titleHeight;
           font-weight: bold;
           font-size: @baseFont;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
           color: #666;
+          padding-right: 0.373333rem;
+          max-width: 4.666667rem;
+          position: relative;
+          &::after {
+            content: '';
+            width: 0.213333rem;
+            height: 0.213333rem;
+            border: 0.026667rem solid #999;
+            border-width: 0.026667rem 0.026667rem 0 0;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 0.466667rem;
+            right: 0.2rem;
+          }
         }
       }
     }
