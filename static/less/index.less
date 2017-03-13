@@ -216,19 +216,25 @@
         margin-left: 2.666667rem;
         padding: 0.2133333rem 0.4rem 0.2133333rem 0;
         border-top: 0.026667rem solid #f0f0f0;
-        .card_img {
-          width: 0.373333rem;
-          height: 0.373333rem;
-          float: left;
-          margin-top: 0.066667rem;
-          margin-right: 0.133333rem;
+        .card {
+          &:not(:last-child) {
+            margin-bottom: 0.133333rem;
+          }
+          .card_img {
+            width: 0.373333rem;
+            height: 0.373333rem;
+            float: left;
+            margin-top: 0.066667rem;
+            margin-right: 0.133333rem;
+          }
+          .card_desc {
+            font-size: 24px;
+            color: #898989;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
-        .card_desc {
-          font-size: 24px;
-          color: #898989;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+        
       }
     }
   }
