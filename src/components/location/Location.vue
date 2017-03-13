@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page location">
     <header class="header">
       <a href="" class="logo">
         <img src="../../assets/imgs/logo.png">
@@ -190,6 +190,6 @@ export default {
 }
 </script>
 
-<style rel="stylesheet/less" lang="less">
+<style lang="less">
   @import "../../assets/less/location.less";
 </style>
