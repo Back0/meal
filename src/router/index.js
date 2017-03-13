@@ -12,6 +12,10 @@ export default new Router({
       path: '/',
       component: Home
     }, {
+      path: '/home',
+      name: 'home',
+      component: Home
+    }, {
       path: '/location',
       name: 'location',
       component: Location
@@ -19,10 +23,6 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
-    }, {
-      path: '/home',
-      name: 'home',
-      component: Home
     }
   ]
 })
