@@ -28,42 +28,7 @@
       </div>
       <div class="addresses">
         <ul class="address_list">
-          <li class="address_item">
-            <span class="more"></span>
-            <div class="address_msg">
-              <h3 class="address_name">新街口（地铁站）</h3>
-              <p class="address_detail">1号线2号线</p>
-            </div>
-          </li>
-          <li class="address_item">
-            <span class="more"></span>
-            <div class="address_msg">
-              <h3 class="address_name">新街口（地铁站）</h3>
-              <p class="address_detail">1号线2号线</p>
-            </div>
-          </li>
-          <li class="address_item">
-            <span class="more"></span>
-            <div class="address_msg">
-              <h3 class="address_name">新街口（地铁站）</h3>
-              <p class="address_detail">1号线2号线</p>
-            </div>
-          </li>
-          <li class="address_item">
-            <span class="more"></span>
-            <div class="address_msg">
-              <h3 class="address_name">新街口（地铁站）</h3>
-              <p class="address_detail">1号线2号线</p>
-            </div>
-          </li>
-          <li class="address_item">
-            <span class="more"></span>
-            <div class="address_msg">
-              <h3 class="address_name">新街口（地铁站）</h3>
-              <p class="address_detail">1号线2号线</p>
-            </div>
-          </li>
-          <li class="address_item">
+          <li class="address_item" v-for="address of addresses">
             <span class="more"></span>
             <div class="address_msg">
               <h3 class="address_name">新街口（地铁站）</h3>
@@ -186,7 +151,32 @@
 
 <script>
 export default {
-  name: 'location'
+  name: 'location',
+  data () {
+    return {
+      addresses: [
+        {
+          name: '新街口',
+          detail: '1号线2号线'
+        }, {
+          name: '新街口',
+          detail: '1号线2号线'
+        }, {
+          name: '新街口',
+          detail: '1号线2号线'
+        }, {
+          name: '新街口',
+          detail: '1号线2号线'
+        }, {
+          name: '新街口',
+          detail: '1号线2号线'
+        }, {
+          name: '新街口',
+          detail: '1号线2号线'
+        }
+      ]
+    }
+  }
 }
 </script>
 
