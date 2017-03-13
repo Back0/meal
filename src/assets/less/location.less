@@ -1,0 +1,251 @@
+@charset "UTF-8";
+@import "./common.less";
+
+.header {
+  @headerHeight: 1.12rem;
+  height: @headerHeight;
+  padding: 0 @paddingSide;
+  color: #6b450a;
+  border-bottom: 1px solid @baseYellow;
+  background-color: @baseYellow;
+  .logo {
+    @logoSize: 0.90667rem;
+    float: left;
+    margin-top: (@headerHeight - @logoSize)/2;
+    img {
+      width: @logoSize;
+      height: @logoSize;
+    }
+  }
+
+  .title {
+    line-height: @headerHeight;
+    margin: 0 0.85333rem;
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .msg {
+    .clearfix;
+    margin-left: 0.85333rem;
+    line-height: @headerHeight;
+    .city {
+      font-size: @baseFont;
+      margin-left: 20px;
+      float: left;
+      .city_icon {
+        width: 0.26667rem;
+        height: 16px;
+        margin-left: 5px;
+        .sprite;
+        background-position: 0 0;
+      }
+    }
+    .mine {
+      font-size: @baseFont;
+      float: right;
+      .mine_icon {
+        width: 0.26667rem;
+        height: 32px;
+        margin-right: 10px;
+        .sprite;
+        background-position: -30px -385px;
+      }
+    }
+  }
+}
+.search {
+  padding: 0.18667rem 0.13333rem;
+  padding-left: 0.24rem;
+  margin-bottom: 0.26667rem;
+  background-color: @baseYellow;
+  .search_box {
+    margin-right: 1.6rem;
+    .search_input {
+      width: 100%;
+      height: 0.8rem;
+      padding-left: 0.8rem;
+      padding-right: 0.15rem;
+      background-image: url('../imgs/search.png');
+      background-size: 0.37333rem 0.37333rem;
+      background-repeat: no-repeat;
+      background-position: 0.2rem;
+      font-size: @smallFont;
+      border-radius: 0.08rem;
+    }
+  }
+  .search_btn {
+    float: right;
+    width: 1.33333rem;
+    height: 0.8rem;
+    font-size: @baseFont;
+    color: @fontYellow;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 0.04rem;
+  }
+}
+.container {
+  width: 100%;
+  overflow: hidden;
+  .clearfix;
+  .tip {
+    height: 0.98667rem;
+    line-height: 0.98667rem;
+    padding: 0 @paddingSide;
+    background-color: #fff3cf;
+    font-size: @smallFont;
+    .ops {
+      float: right;
+      color: #bfbfbf;
+    }
+  }
+  .positioning {
+    @positionHeight: 1.2rem;
+    height: @positionHeight;
+    line-height: @positionHeight;
+    background-color: #fff;
+    text-align: center;
+    .position {
+      display: inline;
+      width: 100%;
+      height: @positionHeight;
+      color: #333;
+      text-align: center;
+      .posi_words {
+        display: inline-block;
+        font-size: 30px;
+        background: url('../imgs/address_search.png') no-repeat;
+        background-size: 0.4rem;
+        background-position-y: center;
+        padding-left: 0.4667rem;
+      }
+    }
+  }
+  .addresses {
+    margin-bottom: 1.6rem;
+    .address_item {
+      @addressHeight: 1.6rem;
+      height: @addressHeight;
+      padding-left: @paddingSide;
+      padding-right: 0.26667rem;
+      background-color: #fff;
+      border-bottom: 0.02667rem solid #ddd;
+      overflow: hidden;
+      .more {
+        float: right;
+        width: 0.26667rem;
+        height: 0.42667rem;
+        .sprite;
+        margin-top: (@addressHeight - 0.42667rem)/2;
+        background-position: 0 -0.61333rem;
+      }
+      .address_msg {
+        margin-right: 0.8rem;
+        .address_name {
+          font-size: @bigFont;
+          line-height: 0.66667rem;
+          color: #000;
+          margin-top: 0.26667rem;
+        }
+        .address_detail {
+          font-size: @smallFont;
+          color: #CACAD0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  .area {
+    margin-bottom: 2.66667rem;
+    .citys {
+      .letter {
+        height: 0.93333rem;
+        line-height: 0.93333rem;
+        padding: 0 @paddingSide;
+        font-size: @smallFont;
+        color: #666666;
+      }
+      .city {
+        float: left;
+        width: 25%;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        font-size: @baseFont;
+        text-align: center;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        border-bottom: @borderWidth solid #efefef;
+        background-color: #fff;
+        &:not(:nth-of-type(4n)) {
+          border-right: @borderWidth solid #efefef;
+        }
+        &.hot {
+          color: @fontYellow;
+        }
+      }
+    }
+
+  }
+  .service {
+    width: 100%;
+    height: 0.50667rem;
+    text-align: center;
+    font-size: @smallFont;
+    color: #999;
+    position: absolute;
+    bottom: 5px;
+    .tel {
+      color: @fontYellow;
+    }
+  }
+}
+.footer {
+  @footerHeight: 1.6rem;
+  width: 100%;
+  height: @footerHeight;
+  line-height: @footerHeight;
+  padding: 0 @paddingSide 0 0.53333rem;
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  bottom: 0;
+  * {
+    vertical-align: middle;
+  }
+  .close {
+    color: #fa9700;
+    font-size: @smallFont;
+    line-height: @smallFont;
+    position: absolute;
+    left: @marginSmall;
+    top: @marginSmall;
+  }
+  .logo {
+    @logoSize: 0.90667rem;
+    margin-right: 0.13333rem;
+    img {
+      width: @logoSize;
+      height: @logoSize;
+    }
+  }
+  .desc {
+    font-size: 0.34667rem;
+    color: #fff;
+  }
+  .down_btn {
+    @btnHeight: 0.77333rem;
+    float: right;
+    margin-top: (@footerHeight - @btnHeight)/2;
+    width: 2rem;
+    height: @btnHeight;
+    line-height: @btnHeight;
+    font-size: @smallFont;
+    background-color: @baseYellow;
+    color: #6b450a;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.08rem;
+  }
+}
