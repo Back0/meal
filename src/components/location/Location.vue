@@ -1,15 +1,6 @@
 <template>
   <div class="page location">
-    <header class="header">
-      <a href="" class="logo">
-        <img src="../../assets/imgs/logo.png">
-      </a>
-      <h3 class="title" style="display: none;">选择城市</h3>
-      <p class="msg" style="display: block;">
-        <span class="city">南京<i class="city_icon"></i></span>
-        <span class="mine"><i class="mine_icon"></i>我的</span>
-      </p>
-    </header>
+    <f-header></f-header>
     <section class="search">
       <button class="search_btn">搜索</button>
       <div class="search_box">
@@ -17,11 +8,11 @@
       </div>
     </section>
     <section class="container">
-      <div class="tip" style="display: none;">
+      <div class="tip" v-if="showTip">
         <span class="words">猜您当前位于：</span>
         <span class="ops"><i class="icon-arrow-right-thin city-presenticon"></i> </span>
       </div>
-      <div class="positioning" style="display: none;">
+      <div class="positioning" v-if="showPosition">
         <a href="" class="position">
           <span class="posi_words">点击定位当前位置</span>
         </a>
@@ -31,8 +22,8 @@
           <li class="address_item" v-for="address of addresses">
             <span class="more"></span>
             <div class="address_msg">
-              <h3 class="address_name">新街口（地铁站）</h3>
-              <p class="address_detail">1号线2号线</p>
+              <h3 class="address_name">{{ address.name }}</h3>
+              <p class="address_detail">{{ address.detail}}</p>
             </div>
           </li>
         </ul>
@@ -67,70 +58,6 @@
             <li class="city ">北京</li>
           </ul>
         </section>
-        <section class="citys">
-          <p class="letter">热门城市</p>
-          <ul class="clearfix">
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">阿拉</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-          </ul>
-        </section>
-        <section class="citys">
-          <p class="letter">热门城市</p>
-          <ul class="clearfix">
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">阿拉</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-          </ul>
-        </section>
-        <section class="citys">
-          <p class="letter">热门城市</p>
-          <ul class="clearfix">
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">阿拉</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-          </ul>
-        </section>
-        <section class="citys">
-          <p class="letter">热门城市</p>
-          <ul class="clearfix">
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">阿拉</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-          </ul>
-        </section>
       </div>
       <div class="service">
         <p class="phone">客服电话:
@@ -138,7 +65,7 @@
         </p>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" v-if="showDownLoad">
       <span class="close"><i class="icon-crossregu"></i></span>
       <a href="" class="logo">
         <img src="../../assets/imgs/logo.png">
@@ -150,8 +77,12 @@
 </template>
 
 <script>
+import Header from './Header.vue'
 export default {
   name: 'location',
+  components: {
+    'f-header': Header
+  },
   data () {
     return {
       addresses: [
@@ -174,7 +105,10 @@ export default {
           name: '新街口',
           detail: '1号线2号线'
         }
-      ]
+      ],
+      showPosition: true,
+      showDownLoad: false,
+      showTip: false
     }
   }
 }
