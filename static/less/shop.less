@@ -48,3 +48,40 @@
     }
   }
 }
+.menu {
+  background-color: #fff;
+  display: table;
+  width: 100%;
+  .kinds {
+    width: 2.266667rem;
+    display: table-cell;
+    background-color: #efefef;
+    .kind {
+      height: 1.626667rem;
+      line-height: 1.626667rem;
+      border-bottom: 0.026667rem dotted #bfbfbf;
+      &>a {
+        font-size: 28px;
+        color: #656565;
+      }
+      &.active {
+        position: relative;
+        background-color: #fff;
+        color: #f99b00;
+        &::before {
+          content: '';
+          display: block;
+          width: 0.106667rem;
+          height: 0.6rem;
+          background-color: #ffd300;
+          position: absolute;
+          top: 0.506667rem;
+          left: -0.16rem;
+        }
+      }
+    }
+  }
+  .dishes {
+
+  }
+}
