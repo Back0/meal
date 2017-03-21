@@ -32,6 +32,8 @@
     font-size: 26px;
     padding: 0 0.4rem;
     position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
     .tip {
       color: #656565;
     }
@@ -60,9 +62,14 @@
       height: 1.626667rem;
       line-height: 1.626667rem;
       border-bottom: 0.026667rem dotted #bfbfbf;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       &>a {
         font-size: 28px;
         color: #656565;
+        margin-left: 0.4rem;
+        white-space: nowrap;
       }
       &.active {
         position: relative;
@@ -76,7 +83,7 @@
           background-color: #ffd300;
           position: absolute;
           top: 0.506667rem;
-          left: -0.16rem;
+          left: 0;
         }
       }
     }
