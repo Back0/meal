@@ -2,11 +2,11 @@ import 'assets/lib/flexible_css.debug.js'
 import 'assets/lib/flexible.debug.js'
 
 import Vue from 'vue'
-import VueResource from 'vue-resource'
+import axios from 'axios'
 import App from './App'
 import router from './router'
 
-Vue.use(VueResource)
+Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
