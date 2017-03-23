@@ -78,6 +78,8 @@
 
 <script>
 import Header from './Header.vue'
+import service from 'assets/config/service'
+
 export default {
   name: 'location',
   components: {
@@ -110,6 +112,14 @@ export default {
       showDownLoad: false,
       showTip: false
     }
+  },
+  methods: {
+    getCites () {
+      this.$http.jsonp()
+    }
+  },
+  mounted () {
+    console.log(service.getCities)
   }
 }
 </script>
