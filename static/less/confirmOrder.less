@@ -2,32 +2,70 @@
 @import "./common.less";
 
 .order_sections {
-  
+  overflow: hidden;
   .order_section {
-    margin: 0.266667rem 0;
+    margin: 0.4rem 0;
     background-color: #fff;
-    .item {
-      font-size: 28px;
-      margin: 0.266667rem;
-      padding: 20px 0;
-      border-bottom: 0.026667rem solid #efefef;
+    .red {
+      color: #fb4e44;
     }
-    .address {
-      .user {
-        color: #2f2f2f;
-        
-        .usersex {
-          margin-left: 0.266667rem;
+    .gray {
+      color: #898989;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 28px;
+      padding: 30px;
+      border-bottom: 0.026667rem solid #efefef;
+      &.more {
+        position: relative;
+        &::after {
+          content: '';
+          display: block;
+          width: 0.266667rem;
+          height: 0.266667rem;
+          position: absolute;
+          top: 40%;
+          right: 0.466667rem;
+          border: solid #adadad;
+          border-width: 0.026667rem 0.026667rem 0 0;
+          transform: rotate(45deg);
         }
-        .userphone {
-          margin-left: 0.8rem;
+        :last-child {
+          margin-right: 20px;
         }
       }
+    }
+    .address {
+      flex-direction: column;
+      align-items: flex-start;
+      background: url('../imgs/border.png') no-repeat;
+      background-position: left top;
+      background-size: 1.52rem auto;
+      background-repeat: repeat-x;
+      position: relative;
+      
     }
     .time {
       .arrival_time {
-        float: right;
+        font-size: 28px;
+        color: #348bed;
+      }
+    }
+    .delivery {
+      flex-direction: column;
+      align-items: flex-start;
+      .delivery_item {
+        width: 100%;       
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+          margin-bottom: 0.266667rem;
+        }
       }
     }
   }
+    
 }
