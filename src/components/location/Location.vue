@@ -17,7 +17,7 @@
           <span class="posi_words">点击定位当前位置</span>
         </a>
       </div>
-      <div class="addresses">
+      <div class="addresses" v-if="showAddress">
         <ul class="address_list">
           <li class="address_item" v-for="address of addresses">
             <span class="more"></span>
@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <div class="area" style="display: none;">
+      <div class="area">
         <section class="citys">
           <p class="letter">热门城市</p>
           <ul class="clearfix">
@@ -87,39 +87,24 @@ export default {
   },
   data () {
     return {
-      addresses: [
-        {
-          name: '新街口',
-          detail: '1号线2号线'
-        }, {
-          name: '新街口',
-          detail: '1号线2号线'
-        }, {
-          name: '新街口',
-          detail: '1号线2号线'
-        }, {
-          name: '新街口',
-          detail: '1号线2号线'
-        }, {
-          name: '新街口',
-          detail: '1号线2号线'
-        }, {
-          name: '新街口',
-          detail: '1号线2号线'
-        }
-      ],
-      showPosition: true,
+      addresses: [],
+      showPosition: false,
       showDownLoad: false,
+      showAddress: false,
       showTip: false
     }
   },
   methods: {
-    getCites () {
-      this.$http.jsonp()
+    getCities () {
+      this.$http.post(service.getCities)
+        .then(response => {
+          console.log(response)
+        })
+        .catch(err => err)
     }
   },
   mounted () {
-    console.log(service.getCities)
+    this.getCities()
   }
 }
 </script>
