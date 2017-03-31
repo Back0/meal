@@ -91,14 +91,15 @@ export default {
       showPosition: false,
       showDownLoad: false,
       showAddress: false,
-      showTip: false
+      showTip: false,
+      cities: ''
     }
   },
   methods: {
     getCities () {
       this.$http.post(service.getCities)
         .then(response => {
-          console.log(response)
+          this.cities = response.body
         })
         .catch(err => err)
     }
