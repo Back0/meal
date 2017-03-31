@@ -1,7 +1,7 @@
 <template>
   <div class="page location">
     <f-header></f-header>
-    <section class="search">
+    <section class="search" v-if="showSearch">
       <button class="search_btn">搜索</button>
       <div class="search_box">
         <input type="search" class="search_input sch-input" placeholder="请输入您的收货地址">
@@ -32,31 +32,23 @@
         <section class="citys">
           <p class="letter">热门城市</p>
           <ul class="clearfix">
-            <li class="city hot">天津</li>
             <li class="city hot">北京</li>
-            <li class="city hot">北京</li>
-            <li class="city hot">北京</li>
-            <li class="city hot">北京</li>
-            <li class="city hot">北京</li>
-            <li class="city hot">北京</li>
-            <li class="city hot">北京</li>
+            <li class="city hot">上海</li>
+            <li class="city hot">广州</li>
+            <li class="city hot">杭州</li>
+            <li class="city hot">深圳</li>
+            <li class="city hot">南京</li>
+            <li class="city hot">成都</li>
+            <li class="city hot">武汉</li>
           </ul>
         </section>
         <section class="citys">
-          <p class="letter">热门城市</p>
-          <ul class="clearfix">
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">阿拉</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-            <li class="city ">北京</li>
-          </ul>
+          <template v-for="cityNav of cities.city_nav">
+            <p class="letter">{{ cityNav.idx }}</p>
+            <ul class="clearfix">
+              <li class="city" v-for="city of cityNav.cities" :city-id="city.city_id">{{ city.city_name }}</li>
+            </ul>
+          </template>
         </section>
       </div>
       <div class="service">
@@ -91,7 +83,8 @@ export default {
       showPosition: false,
       showDownLoad: false,
       showAddress: false,
-      showTip: false,
+      showTip: true,
+      showSearch: false,
       cities: ''
     }
   },
@@ -99,7 +92,7 @@ export default {
     getCities () {
       this.$http.post(service.getCities)
         .then(response => {
-          this.cities = response.body
+          this.cities = response.body.data
         })
         .catch(err => err)
     }
